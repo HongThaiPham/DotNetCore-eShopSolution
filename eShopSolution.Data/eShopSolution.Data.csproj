@@ -11,6 +11,7 @@
     <None Remove="Entities\" />
     <None Remove="EF\" />
     <None Remove="Enums\" />
+    <None Remove="Configurations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" />
@@ -27,5 +28,6 @@
     <Folder Include="Entities\" />
     <Folder Include="EF\" />
     <Folder Include="Enums\" />
+    <Folder Include="Configurations\" />
   </ItemGroup>
 </Project>
