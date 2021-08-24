@@ -15,7 +15,11 @@
     <None Remove="Microsoft.Extensions.Configuration.FileExtensions" />
     <None Remove="Microsoft.Extensions.Configuration.Json" />
     <None Remove="Extensions\" />
+
+    <None Remove="Microsoft.EntityFrameworkCore.Relational" />
+
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" />
@@ -29,7 +33,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.9" />
+
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.9" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
