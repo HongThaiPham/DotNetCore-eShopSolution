@@ -14,6 +14,7 @@
     <None Remove="Configurations\" />
     <None Remove="Microsoft.Extensions.Configuration.FileExtensions" />
     <None Remove="Microsoft.Extensions.Configuration.Json" />
+    <None Remove="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" />
@@ -33,5 +34,6 @@
     <Folder Include="EF\" />
     <Folder Include="Enums\" />
     <Folder Include="Configurations\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>
