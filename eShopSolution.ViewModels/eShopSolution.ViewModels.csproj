@@ -7,16 +7,12 @@
   <ItemGroup>
     <None Remove="Catalog\" />
     <None Remove="Catalog\Products\" />
-    <None Remove="Catalog\Products\Public\" />
-    <None Remove="Catalog\Products\Manage\" />
     <None Remove="Common\" />
     <None Remove="Microsoft.AspNetCore.Http.Features" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Catalog\" />
     <Folder Include="Catalog\Products\" />
-    <Folder Include="Catalog\Products\Public\" />
-    <Folder Include="Catalog\Products\Manage\" />
     <Folder Include="Common\" />
   </ItemGroup>
   <ItemGroup>
