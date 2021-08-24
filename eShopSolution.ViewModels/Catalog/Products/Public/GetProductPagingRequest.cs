@@ -1,7 +1,8 @@
 ﻿using System;
-using eShopSolution.Application.Dtos;
 
-namespace eShopSolution.Application.Catalog.Products.Dtos.Public
+using eShopSolution.ViewModels.Common;
+
+namespace eShopSolution.ViewModels.Catalog.Products.Public
 {
     public class GetProductPagingRequest : PagingRequestBase
     {

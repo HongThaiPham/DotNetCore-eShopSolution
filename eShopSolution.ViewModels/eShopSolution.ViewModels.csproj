@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Catalog\" />
+    <None Remove="Catalog\Products\" />
+    <None Remove="Catalog\Products\Public\" />
+    <None Remove="Catalog\Products\Manage\" />
+    <None Remove="Common\" />
+    <None Remove="Microsoft.AspNetCore.Http.Features" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Catalog\" />
+    <Folder Include="Catalog\Products\" />
+    <Folder Include="Catalog\Products\Public\" />
+    <Folder Include="Catalog\Products\Manage\" />
+    <Folder Include="Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.9" />
+  </ItemGroup>
+</Project>
