@@ -4,4 +4,24 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Catalog\" />
+    <None Remove="Catalog\Product\" />
+    <None Remove="Catalog\Products\Dtos\" />
+    <None Remove="Dtos\" />
+    <None Remove="Catalog\Products\Dtos\Manage\" />
+    <None Remove="Catalog\Products\Dtos\Public\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Catalog\" />
+    <Folder Include="Catalog\Products\" />
+    <Folder Include="Catalog\Products\Dtos\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Catalog\Products\Dtos\Manage\" />
+    <Folder Include="Catalog\Products\Dtos\Public\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eShopSolution.Data\eShopSolution.Data.csproj" />
+    <ProjectReference Include="..\eShopSolution.Utilities\eShopSolution.Utilities.csproj" />
+  </ItemGroup>
 </Project>
