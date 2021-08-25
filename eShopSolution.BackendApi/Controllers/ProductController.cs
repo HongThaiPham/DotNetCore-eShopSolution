@@ -25,17 +25,17 @@ namespace eShopSolution.BackendApi.Controllers
             _manageProductService = manageProductService;
         }
 
-        [HttpGet("{languageId}")]
-        public async Task<IActionResult> Get(string languageId)
-        {
-            var products = await _publicProductService.GetAll(languageId);
-            return Ok(products);
-        }
+        //[HttpGet("{languageId}")]
+        //public async Task<IActionResult> GetAll(string languageId)
+        //{
+        //    var products = await _publicProductService.GetAll(languageId);
+        //    return Ok(products);
+        //}
 
-        [HttpGet("public-paging")]
-        public async Task<IActionResult> Get([FromQuery] GetPublicProductPagingRequest request)
+        [HttpGet("{languageId}")]
+        public async Task<IActionResult> GetAllPaging(string languageId, [FromQuery] GetPublicProductPagingRequest request)
         {
-            var products = await _publicProductService.GetAllByCategoryId(request);
+            var products = await _publicProductService.GetAllByCategoryId(languageId, request);
             return Ok(products);
         }
 
@@ -51,6 +51,7 @@ namespace eShopSolution.BackendApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] ProductCreateRequest request)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             var productId = await _manageProductService.Create(request);
             if (productId == 0)
                 return BadRequest();
@@ -62,6 +63,7 @@ namespace eShopSolution.BackendApi.Controllers
         [HttpPut]
         public async Task<IActionResult> Update([FromForm] ProductUpdateRequest request)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             var affectedResult = await _manageProductService.Update(request);
             if (affectedResult == 0)
                 return BadRequest();
@@ -77,10 +79,10 @@ namespace eShopSolution.BackendApi.Controllers
             return Ok();
         }
 
-        [HttpPut("price/{id}/{newPrice}")]
-        public async Task<IActionResult> UpdatePrice(int id, decimal newPrice)
+        [HttpPatch("{productId}/{newPrice}")]
+        public async Task<IActionResult> UpdatePrice(int productId, decimal newPrice)
         {
-            var isSuccessful = await _manageProductService.UpdatePrice(id, newPrice);
+            var isSuccessful = await _manageProductService.UpdatePrice(productId, newPrice);
             if (!isSuccessful)
                 return BadRequest();
             return Ok();
