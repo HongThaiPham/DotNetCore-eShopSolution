@@ -11,11 +11,17 @@
 		<None Remove="Microsoft.Extensions.Hosting" />
 		<None Remove="Microsoft.Extensions.Hosting.Abstractions" />
 		<None Remove="Microsoft.AspNetCore.Hosting.Abstractions" />
+		<None Remove="System\" />
+		<None Remove="System\Users\" />
+		<None Remove="Microsoft.IdentityModel.Tokens" />
+		<None Remove="System.IdentityModel.Tokens.Jwt" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Catalog\" />
 		<Folder Include="Catalog\Products\" />
 		<Folder Include="Common\" />
+		<Folder Include="System\" />
+		<Folder Include="System\Users\" />
 	</ItemGroup>
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
@@ -24,5 +30,9 @@
 		<ProjectReference Include="..\eShopSolution.Data\eShopSolution.Data.csproj" />
 		<ProjectReference Include="..\eShopSolution.Utilities\eShopSolution.Utilities.csproj" />
 		<ProjectReference Include="..\eShopSolution.ViewModels\eShopSolution.ViewModels.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.12.2" />
+	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.12.2" />
 	</ItemGroup>
 </Project>
