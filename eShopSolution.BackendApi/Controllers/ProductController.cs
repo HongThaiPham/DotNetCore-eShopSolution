@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eShopSolution.Application.Catalog.Products;
 using eShopSolution.ViewModels.Catalog.ProductImages;
 using eShopSolution.ViewModels.Catalog.Products;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,6 +16,7 @@ namespace eShopSolution.BackendApi.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IPublicProductService _publicProductService;
@@ -34,6 +36,7 @@ namespace eShopSolution.BackendApi.Controllers
         //}
 
         [HttpGet("{languageId}")]
+
         public async Task<IActionResult> GetAllPaging(string languageId, [FromQuery] GetPublicProductPagingRequest request)
         {
             var products = await _publicProductService.GetAllByCategoryId(languageId, request);
