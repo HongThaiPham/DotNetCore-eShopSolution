@@ -1,5 +1,5 @@
 ﻿using System;
-using eShopSolution.Application.Dtos;
+using eShopSolution.ViewModels.Common;
 
 namespace eShopSolution.Application.Catalog.Products.Dtos.Public
 {

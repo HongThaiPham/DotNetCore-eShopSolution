@@ -30,7 +30,7 @@ namespace eShopSolution.AdminApp
             services.AddControllersWithViews().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>()); ;
             services.AddHttpClient("eShop", c =>
              {
-                 c.BaseAddress = new Uri("https://localhost:5001");
+                 c.BaseAddress = new Uri(Configuration.GetValue<string>("ApiBaseHref"));
              });
 
 
@@ -39,6 +39,12 @@ namespace eShopSolution.AdminApp
                 options.LoginPath = "/User/Login/";
                 options.AccessDeniedPath = "/User/Forbidden";
 
+            });
+
+            services.AddSession(options =>
+            {
+
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
             });
 
             services.AddTransient<IUserApiClient, UserApiClient>();
@@ -72,6 +78,7 @@ namespace eShopSolution.AdminApp
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

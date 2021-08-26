@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eShopSolution.Application.System.Users;
 using eShopSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,6 +14,7 @@ namespace eShopSolution.BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserController : Controller
     {
         private readonly IUserService _userService;
@@ -34,6 +36,7 @@ namespace eShopSolution.BackendApi.Controllers
             {
                 return BadRequest("Username or password is incorrect.");
             }
+
             return Ok(resultToken);
         }
 
@@ -51,5 +54,13 @@ namespace eShopSolution.BackendApi.Controllers
             }
             return Ok();
         }
+
+        [HttpGet("paging")]
+        public async Task<IActionResult> GetAllPaging([FromQuery] GetUserPagingRequest request)
+        {
+            var products = await _userService.GetUserPaging(request);
+            return Ok(products);
+        }
+
     }
 }
