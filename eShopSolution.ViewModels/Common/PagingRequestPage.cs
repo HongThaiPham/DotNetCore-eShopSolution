@@ -1,7 +1,7 @@
 ﻿using System;
 namespace eShopSolution.ViewModels.Common
 {
-    public class PagingRequestBase
+    public class PagingRequestBase : RequestBase
     {
         public int PageIndex { get; set; }
         public int PageSize { get; set; }

@@ -19,12 +19,12 @@ namespace eShopSolution.BackendApi.Controllers
     [Authorize]
     public class ProductController : ControllerBase
     {
-        private readonly IPublicProductService _publicProductService;
-        private readonly IManageProductService _manageProductService;
 
-        public ProductController(IPublicProductService publicProductService, IManageProductService manageProductService)
+        private readonly IProductService _manageProductService;
+
+        public ProductController(IProductService manageProductService)
         {
-            _publicProductService = publicProductService;
+
             _manageProductService = manageProductService;
         }
 
@@ -39,7 +39,7 @@ namespace eShopSolution.BackendApi.Controllers
 
         public async Task<IActionResult> GetAllPaging(string languageId, [FromQuery] GetPublicProductPagingRequest request)
         {
-            var products = await _publicProductService.GetAllByCategoryId(languageId, request);
+            var products = await _manageProductService.GetAllByCategoryId(languageId, request);
             return Ok(products);
         }
 
