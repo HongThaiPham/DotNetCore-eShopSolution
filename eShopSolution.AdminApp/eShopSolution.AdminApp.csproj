@@ -13,7 +13,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\" />
-    <Folder Include="Views\User\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
