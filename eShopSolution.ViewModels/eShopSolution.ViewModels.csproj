@@ -17,10 +17,7 @@
   <ItemGroup>
     <Folder Include="Catalog\" />
     <Folder Include="Catalog\Products\" />
-    <Folder Include="Common\" />
     <Folder Include="Catalog\ProductImages\" />
-    <Folder Include="System\" />
-    <Folder Include="System\Users\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.9" />
