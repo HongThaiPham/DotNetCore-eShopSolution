@@ -8,6 +8,7 @@ namespace eShopSolution.ViewModels.Common
 {
     public class ApiFailedResult<T> : ApiResult<T>
     {
+        public ApiFailedResult() { }
         public string[] ValidationErrors { get; set; }
         public ApiFailedResult(string message)
         {

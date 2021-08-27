@@ -44,8 +44,8 @@ namespace eShopSolution.AdminApp.Services
             var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
             var client = _clientFactory.CreateClient("eShop");
             var respone = await client.PostAsync("/api/user/authenticate", httpContent);
-           if(respone.IsSuccessStatusCode)
-            return  JsonConvert.DeserializeObject<ApiSuccessedResult<string>>( await respone.Content.ReadAsStringAsync());
+            if (respone.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<ApiSuccessedResult<string>>(await respone.Content.ReadAsStringAsync());
             return JsonConvert.DeserializeObject<ApiFailedResult<string>>(await respone.Content.ReadAsStringAsync());
         }
 
@@ -73,7 +73,7 @@ namespace eShopSolution.AdminApp.Services
             return users;
         }
 
-      
+
 
         public async Task<ApiResult<bool>> RegisterUser(RegisterRequest request)
         {
@@ -82,7 +82,7 @@ namespace eShopSolution.AdminApp.Services
             var client = _clientFactory.CreateClient("eShop");
             var respone = await client.PostAsync("/api/user/register", httpContent);
             var body = await respone.Content.ReadAsStringAsync();
-           
+
             if (respone.IsSuccessStatusCode)
                 return JsonConvert.DeserializeObject<ApiSuccessedResult<bool>>(body);
             return JsonConvert.DeserializeObject<ApiFailedResult<bool>>(body);
