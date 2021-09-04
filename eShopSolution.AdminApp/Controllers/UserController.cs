@@ -30,7 +30,7 @@ namespace eShopSolution.AdminApp.Controllers
            
         }
 
-        public async Task<IActionResult> Index(string keyword, int pageIndex = 1, int pageSize = 1)
+        public async Task<IActionResult> Index(string keyword, int pageIndex = 1, int pageSize = 3)
         {
             var session = HttpContext.Session.GetString("Token");
             var request = new GetUserPagingRequest()

@@ -152,7 +152,7 @@ namespace eShopSolution.Application.System.Users
 
 
 
-            var result = await _userManager.CreateAsync(user, request.Password);
+            var result = await _userManager.CreateAsync(newUser, request.Password);
             if (result.Succeeded)
             {
                 return new ApiSuccessedResult<bool>();
