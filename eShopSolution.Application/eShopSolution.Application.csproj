@@ -20,7 +20,6 @@
 		<Folder Include="Catalog\" />
 		<Folder Include="Catalog\Products\" />
 		<Folder Include="Common\" />
-		<Folder Include="System\" />
 		<Folder Include="System\Users\" />
 	</ItemGroup>
 	<ItemGroup>
