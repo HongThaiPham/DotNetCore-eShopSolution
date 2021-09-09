@@ -530,7 +530,7 @@ namespace eShopSolution.Data.Migrations
             migrationBuilder.InsertData(
                 table: "AppRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Description", "Name", "NormalizedName" },
-                values: new object[] { new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"), "7a040e9c-dd85-4d5a-a52f-137881fd3870", "Administrator role", "admin", "admin" });
+                values: new object[] { new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"), "ab8eafb2-7f9d-4304-8ad5-a5d73d8c18c3", "Administrator role", "admin", "admin" });
 
             migrationBuilder.InsertData(
                 table: "AppUserRoles",
@@ -540,7 +540,7 @@ namespace eShopSolution.Data.Migrations
             migrationBuilder.InsertData(
                 table: "AppUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Dob", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"), 0, "2065373b-ff37-4e3a-b898-c0c7038d2d05", new DateTime(2021, 5, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "hongthaipro@gmail.com", true, "Leo", "Pham", false, null, "hongthaipro@gmail.com", "admin", "AQAAAAEAACcQAAAAEMF9aw+5gP8Hh2FA3vK/pC7SOrx1J26smGdbcNIjj2dO8BjKXHdW03Zsbu1ims121A==", null, false, "", false, "admin" });
+                values: new object[] { new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"), 0, "76f86b25-a938-4b2f-9de7-8561ca5d88a8", new DateTime(2021, 5, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "hongthaipro@gmail.com", true, "Leo", "Pham", false, null, "hongthaipro@gmail.com", "admin", "AQAAAAEAACcQAAAAEIMMb7WW5Bh5Mjg90x4Gt9D0xB30YvYR6K6LNPchSqn44Z4T+rIK0J4rRtXomtR8uA==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "Categories",
@@ -563,7 +563,7 @@ namespace eShopSolution.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "DateCreated", "OriginalPrice", "Price" },
-                values: new object[] { 1, new DateTime(2021, 9, 4, 10, 16, 16, 643, DateTimeKind.Local).AddTicks(8367), 100000m, 200000m });
+                values: new object[] { 1, new DateTime(2021, 9, 10, 4, 22, 19, 786, DateTimeKind.Local).AddTicks(6596), 100000m, 200000m });
 
             migrationBuilder.InsertData(
                 table: "CategoryTranslations",

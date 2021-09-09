@@ -53,7 +53,7 @@ namespace eShopSolution.Data.EF
         public DbSet<Category> Categories { get; set; }
         public DbSet<AppConfig> AppConfigs { get; set; }
         public DbSet<Cart> Carts { get; set; }
-        public DbSet<CategoryTranslation> categoryTranslations { get; set; }
+        public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
         public DbSet<ProductInCategory> ProductInCategories { get; set; }
         public DbSet<Contact> Contacts { get; set; }
 
